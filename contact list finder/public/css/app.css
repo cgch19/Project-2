@@ -1,0 +1,20 @@
+body, h1, h2, h3, ul {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    text-align: center;
+    background: url(https://www.wallpaperstogo.com/images/product/large/203838.jpg);
+}
+
+h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+    color: red;
+}
+
+.contact-link {
+    display: inline-block;
+    color: blueviolet;
+}
