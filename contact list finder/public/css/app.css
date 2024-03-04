@@ -5,7 +5,10 @@ body, h1, h2, h3, ul {
 
 body {
     text-align: center;
-    background: url(https://www.wallpaperstogo.com/images/product/large/203838.jpg);
+    background: url(https://images.unsplash.com/photo-1533090161767-e6ffed986c88?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bWluaW1hbGlzdCUyMG9mZmljZXxlbnwwfHwwfHx8MA%3D%3D);
+    background-repeat: no-repeat;
+    margin: 0;
+   
 }
 
 h1 {
@@ -17,4 +20,9 @@ h1 {
 .contact-link {
     display: inline-block;
     color: blueviolet;
+}
+
+a{
+    list-style-type: none;
+    text-decoration: none;
 }

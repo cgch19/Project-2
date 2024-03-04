@@ -5,26 +5,32 @@ const Contact = require("../models/contact")
 //     res.render("loginSignup")
 // })
 
+
+//NEW
 const newForm = (req, res) => {
     try {
         res.render('new.ejs', 
         { tabTitle: 'New Contact', 
-        currentUser: req.session.currentUser });
+        // currentUser: req.session.currentUser 
+        });
     } catch (err) {
         console.log(err);
     }
 }
 
+//CREATE
 const create = async (req, res) => {
     try{
         req.body.isFriend = req.body.isFriend === 'on' ? true : false
         const newContact = await Contact.create(req.body)
         console.log(newContact)
+        res.redirect('/contacts')
     }catch(err){
         console.log(err)
     }
 }
 
+//INDEX
 const index = async (req, res) => {
     try {
         const contacts = await Contact.find()
@@ -38,6 +44,7 @@ const index = async (req, res) => {
     };
 };
 
+//SHOW
 const show = async (req, res) => {
     try {
        console.log(req.params.id);
@@ -47,7 +54,7 @@ const show = async (req, res) => {
        res.render('show.ejs', {
           contact,
           tabTitle: contact.name, 
-          currentUser: req.session.currentUser
+        //   currentUser: req.session.currentUser
        });
     } catch (err) {
        console.log(err);
@@ -55,37 +62,51 @@ const show = async (req, res) => {
     }
  };
 
-// app.post("/contacts", (req, res) => {
-//     const newContact = {
-//         name: req.body.name,
-//         img: req.body.img,
-//         phone: req.body.phone,
-//         address: req.body.address
-//     }
-//     contacts.push(newContact)
-//     res.redirect("/contacts")
-// })
+ //DELETE
+const destroy = async (req, res) => {
+    try{
+        console.log("inside destroy route")
+        await Contact.findByIdAndDelete(req.params.id)
+        res.redirect('/contacts')
+    }catch(err){
+        console.log(err)
+    }
+}
 
-// //Sign up
-// app.post('/signup', (req, res) => {
-//     const { newEmail, newPassword } = req.body
-//     users.push({ email: newEmail, password: newPassword})
-//     res.send("Signup successful! You can now login.")
-// })
+//EDIT
+const editForm = async (req, res) => {
+    try {
+        const contact = await Contact.findById(req.params.id)
+        res.render("edit.ejs", {
+            contact,
+            tabTitle: 'Edit Contact',
+            // cuurentUser: req.session.currentUser
+        })
+    }catch(err) {
+        console.log(err)
+    }
+}
 
-// app.post("/login", (req, res) => {
-//     const { email, password } = req.body
-//     const user = users.find(u => u.email === email && u.password === password)
-//     if (user) {
-//         res.send("Login successful! Redirecting to dashboard")
-//     } else {
-//         res.send("Invalid email or password. Please try again")
-//     }
-// })
+//UPDATE
+const update = async (req, res) => {
+    try{
+        console.log(req.body)
+        req.body.contactUpdated = req.body.contactUpdated === 'on' ? true : false
+        console.log(req.body)
+        const index = req.params.id
+        const contact = await Contact.findByIdAndUpdate(index, req.body, { new: true })
+        res.redirect('/contacts')
+    }catch(err){
+        console.log(err)
+    }
+}
 
 module.exports = {
+    new: newForm,
     create,
     index,
     show,
-    new: newForm,
+    destroy,
+    edit: editForm,
+    update
 }

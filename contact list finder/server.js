@@ -17,10 +17,10 @@ app.use(methodOverride('_method'))
 app.use("/contacts", contactRoutes);
 
 
-app.set('view engine', 'ejs');
+// app.set('view engine', 'ejs');
 
 app.get("/", (req, res) => {
-    res.redirect("/contacts/")
+    res.redirect("/contacts")
 })
 
 
