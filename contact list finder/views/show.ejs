@@ -3,28 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contact Details</title>
+    <link rel="stylesheet" href="../css/app.css">
 </head>
-<link rel="stylesheet" href="../css/app.css">
 <body>
-    <h1><%= contact.name %></h1>
-    <h3>Contact Details:
-        <ul>
-            <li>
-                <img src="<%= contact.imageUrl %>" alt="Contact Image">
-            </li>
-            <li>
-                Name: <%= contact.name %>
-            </li>
-            <li>
-                Phone: <%= contact.phone %>
-            </li>
-            <li>
-                Address: <%= contact.address %>
-            </li>
-        </ul>
-        <a href="/contacts">Home</a>
-    </h3>
-    
+    <h1 class="contact-name"><%= contact.name %></h1>
+    <h3 class="contact-details">Contact Details:</h3>
+    <ul class="contact-list">
+        <li class="contact-item">
+            <img src="<%= contact.imageUrl %>" alt="Contact Image" class="contact-image">
+        </li>
+        <li class="contact-item">
+            Name: <span class="contact-info"><%= contact.name %></span>
+        </li>
+        <li class="contact-item">
+            Phone: <span class="contact-info"><%= contact.phone %></span>
+        </li>
+        <li class="contact-item">
+            Address: <span class="contact-info"><%= contact.address %></span>
+        </li>
+    </ul>
+    <a href="/contacts" class="home-link">Home</a>
 </body>
 </html>
