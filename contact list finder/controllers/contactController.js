@@ -11,7 +11,7 @@ const newForm = (req, res) => {
     try {
         res.render('new.ejs', 
         { tabTitle: 'New Contact', 
-        // currentUser: req.session.currentUser 
+        currentUser: req.session.currentUser 
         });
     } catch (err) {
         console.log(err);
@@ -37,7 +37,7 @@ const index = async (req, res) => {
         res.render('index.ejs', { 
             allContacts: contacts, 
             tabTitle: 'Index', 
-            // currentUser: req.session.User 
+            currentUser: req.session.User 
         })
     }catch(err) {
         console.log(err)
@@ -54,7 +54,7 @@ const show = async (req, res) => {
        res.render('show.ejs', {
           contact,
           tabTitle: contact.name, 
-        //   currentUser: req.session.currentUser
+          currentUser: req.session.currentUser
        });
     } catch (err) {
        console.log(err);
@@ -80,7 +80,7 @@ const editForm = async (req, res) => {
         res.render("edit.ejs", {
             contact,
             tabTitle: 'Edit Contact',
-            // curentUser: req.session.currentUser
+            curentUser: req.session.currentUser
         })
     }catch(err) {
         console.log(err)
