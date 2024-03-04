@@ -80,7 +80,7 @@ const editForm = async (req, res) => {
         res.render("edit.ejs", {
             contact,
             tabTitle: 'Edit Contact',
-            // cuurentUser: req.session.currentUser
+            // curentUser: req.session.currentUser
         })
     }catch(err) {
         console.log(err)
