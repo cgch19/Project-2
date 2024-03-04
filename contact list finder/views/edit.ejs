@@ -5,7 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<link rel="stylesheet" href="../css/app.css">
 <body>
-    
+    <h1>Edit Contact</h1>
+    <form action="/contacts/<%= contact.id %>?_method=PUT" method="POST">
+    <div>
+        <label for="name" class="form-label">Name</label>
+        <input value="<%= contact.name %>" class="form-control" type="text" name="name"/>
+    </div>
+    <div>
+        <label for="phone" class="form-label">Phone Number</label>
+        <input value="<%= contact.phone %>" class="form-control" type="text" name="phone" id="phone"/>
+    </div>
+    <div>
+        <label for="address" class="form-label">Address</label>
+        <input value="<%= contact.address %>" class="form-control" type="text" name="address" id="address"/>
+    </div>
+    <input type="submit" class="text-center" value="Submit"/>
+</form>     
 </body>
 </html>
