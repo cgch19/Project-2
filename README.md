@@ -34,7 +34,7 @@ https://cgch19.github.io/memory-game/
 
  ---
 ## Next Steps
-- Create Levels that would challenge the player like a higher grid count.
-- Trying to add different powers like if it gets harder you can unlock a hint.
-- Make a different UI for each level
-- Add different animations
+- Contact Import/Export
+- Notifications and Reminders
+- Data Backup and Recovery
+- Mobile Application Development
