@@ -235,13 +235,6 @@ header {
     margin-left: 5px;
     margin-top: 5px;
 }
-.fox{
-    margin: 2%;
-    display: flex;
-    justify-content: center;
-}
-.ox{
-    margin: 2%;
-    display: flex;
-    justify-content: center;
+.input-group {
+    margin-bottom: 10px;
 }

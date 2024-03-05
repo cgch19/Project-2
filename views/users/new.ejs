@@ -9,11 +9,13 @@
 <body>
     <h1 class="heading">Sign Up</h1>
     <form action="/users" method="POST" class="signup-form">
-        <div class="fox">
-        Email: <input required type="text" name="username" class="input-field"/><br>
+        <div class="input-group">
+        <label for="email">Email: </label>
+        <input required type="text" name="username" class="input-field"/><br>
         </div>
-        Password: <input required type="password" name="password" id="password" class="input-field"/>
-        <div class="ox">
+        <div class="input-group">
+        <label for="password">Password:</label> 
+        <input required type="password" name="password" id="password" class="input-field"/>
     </div>
     <input type="checkbox" id="showPassword" class="show-password" onchange="togglePassword()"/> Show Password<br>
         <div>
