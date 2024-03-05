@@ -7,7 +7,7 @@ The Contact List finder is designed to help users organize and manage their cont
 ---
 ## MVP Goals
 
-- User Authentication and Authorizatio
+- User Authentication and Authorization
 - Contact Management
 - Search Functionality
 - Deployment
@@ -15,12 +15,12 @@ The Contact List finder is designed to help users organize and manage their cont
 
 ---
 ## Built with
--  Node,express, and MOng
+-  Node/Express/MongoDB app 
 
 ---
 ## Stretch Goals
- -Timer Challenge Mode: Have a timer where players need to match cards within a set time limit, adding an element of urgency and excitement.
- -Simple Animations: Incorporate subtle animations for card flips and matches to make the game more visually appealing.
+ -Sorting: Allow users to sort the contact list based on different criteria such as name, phone number, or address, either ascending or descending. This can help users find contacts more easily.
+ -Search Functionality: Implement a search bar allowing users to search for contacts by name, phone number, or address. This could involve client-side or server-side filtering of contacts based on the search query.
 
 ---
 ## Getting Started
