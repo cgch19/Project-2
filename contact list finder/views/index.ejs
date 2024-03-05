@@ -4,6 +4,11 @@
     <link rel="stylesheet" href="../css/app.css">
 </head>
 <body>
+    <div class="top-right">
+        <form action="/sessions?_method=DELETE" method="POST">
+          <input type="submit" class="btn-sign-out"value="Sign Out" />
+        </form>
+    </div>
     <h1 class="heading">Contacts</h1>
     <div class="container">
         <a href="/contacts/new" class="btn btn-primary">Create Contact</a>

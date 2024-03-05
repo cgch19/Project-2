@@ -1,9 +1,5 @@
 const Contact = require("../models/contact")
-
-
-// app.get('/', (req, res) => {
-//     res.render("loginSignup")
-// })
+const isAuthenticated = require("../controllers/isAuthenticated")
 
 
 //NEW

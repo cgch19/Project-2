@@ -11,21 +11,11 @@ const userController = require("./controllers/userController")
 const sessionsController = require("./controllers/sessions")
 
 
-
 //MIDDLEWARES
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use(express.static('public'))
 app.use(methodOverride('_method'))
-app.use("/contacts", contactRoutes);
-
-app.use((req, res, next) => {
-    console.log('Session:', req.session)
-    next()
-})
-
-
-
 app.use(session({
     secret: process.env.SECRET,
     resave: false,
@@ -34,9 +24,9 @@ app.use(session({
 
 // app.set('view engine', 'ejs');
 
+app.use('/sessions', sessionsController)
 app.use('/contacts', contactRoutes)
 app.use('/users', userController)
-app.use('/sessions', sessionsController)
 
 app.get("/", (req, res) => {
     res.redirect("/contacts")
