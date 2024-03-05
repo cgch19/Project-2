@@ -3,7 +3,7 @@ const app = express()
 const port = 3000
 const methodOverride = require("method-override")
 require('./config/database');
-require("dotenv").config()
+require("./contact list finder/node_modules/dotenv/lib/main").config()
 const session = require('express-session')
 
 const contactRoutes = require('./routes/contacts')
