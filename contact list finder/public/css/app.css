@@ -13,7 +13,7 @@ body {
     font-family: Arial, sans-serif;
 }
 h1 {
-    font-size: 50px;
+    font-size: 55px;
     margin-bottom: 20px;
     color: red;
 }
@@ -59,6 +59,7 @@ a{
 .contact-table {
     width: 100%;
     border-collapse: collapse;
+    border-color: transparent;
 }
 .contact-name {
     border: 1px solid #ddd;
@@ -179,4 +180,40 @@ a{
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
+}
+.bape{
+    color:red;
+}
+.sign-up-btn {
+    margin-left: auto; 
+    margin-left: 10px;
+    padding: 5px 10px;
+    background-color: #007bff; 
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+}
+.signup-btn:hover {
+    background-color: #0056b3; 
+}
+.benny{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.sprite{
+    margin: 4%;
+}
+.chair{
+    margin: 10%;
+}
+
+.footer {
+    bottom: 0;
+    position: fixed;
+    text-align: center;
+    left: 0;
+    width: 100%;
+    color: white;
 }
