@@ -16,11 +16,24 @@
         Email: <input required type="text" name="username" class="input-field"/><br>
         </div>
         <div class="sprite">
-        Password: <input required type="password" name="password" class="input-field"/><br>
+        Password: <input required type="password" name="password" id="password" class="input-field"/><br>
         </div>
+    </div>
+    <input type="checkbox" id="showPassword" class="show-password" onchange="togglePassword()"/> Show Password<br>
+        <div>
         <input type="submit" name="login" value="Login" class="btn btn-primary"/>
         <a class="sign-up-btn" href="/users/new">Sign Up</a>
     </form>
     </div>
+    <script>
+        function togglePassword() {
+            let passwordField = document.getElementById("password")
+            if (passwordField.type === "password") {
+                passwordField.type = "text"
+            } else {
+                passwordField.type = "password"
+            }
+        }
+    </script>
 </body>
 </html>

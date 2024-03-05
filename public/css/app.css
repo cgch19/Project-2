@@ -227,3 +227,21 @@ header {
     padding: 10px; 
     box-sizing: border-box;
 }
+/* .show-password {
+    margin-top: 5px;
+} */
+.show-password {
+    display: inline-block;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+.fox{
+    margin: 2%;
+    display: flex;
+    justify-content: center;
+}
+.ox{
+    margin: 2%;
+    display: flex;
+    justify-content: center;
+}

@@ -3,7 +3,7 @@ const app = express()
 const port = 3000
 const methodOverride = require("method-override")
 require('./config/database');
-require("./contact list finder/node_modules/dotenv/lib/main").config()
+require('dotenv').config();
 const session = require('express-session')
 
 const contactRoutes = require('./routes/contacts')
@@ -38,9 +38,6 @@ app.get("/", (req, res) => {
     res.redirect("/contacts")
 })
 
-app.get('/', (req, res) => {
-    res.render('index', { currentUser: req.currentUser });
-});
 
 
 app.listen(port, () => {
