@@ -21,6 +21,12 @@ app.use(session({
     resave: false,
     saveUninitialized: false
 }))
+app.use((req, res, next) => {
+    req.currentUser = {
+        email: 'example@example.com'
+    };
+    next();
+});
 
 // app.set('view engine', 'ejs');
 
@@ -32,7 +38,9 @@ app.get("/", (req, res) => {
     res.redirect("/contacts")
 })
 
-
+app.get('/', (req, res) => {
+    res.render('index', { currentUser: req.currentUser });
+});
 
 
 app.listen(port, () => {

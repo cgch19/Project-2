@@ -1,0 +1,9 @@
+<header>
+    <div class="container">
+        <% if (currentUser) { %>
+            <li class="nav-link">Welcome <%= currentUser.email %></li>
+        <% } else { %>
+            <li class="nav-link">Welcome Guest</li>
+        <% } %>
+    </div>
+</header>
