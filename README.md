@@ -19,8 +19,8 @@ The Contact List finder is designed to help users organize and manage their cont
 
 ---
 ## Stretch Goals
- -Sorting: Allow users to sort the contact list based on different criteria such as name, phone number, or address, either ascending or descending. This can help users find contacts more easily.
- -Search Functionality: Implement a search bar allowing users to search for contacts by name, phone number, or address. This could involve client-side or server-side filtering of contacts based on the search query.
+ - Sorting: Allow users to sort the contact list based on different criteria such as name, phone number, or address, either ascending or descending. This can help users find contacts more easily.
+ - Search Functionality: Implement a search bar allowing users to search for contacts by name, phone number, or address. This could involve client-side or server-side filtering of contacts based on the search query.
 
 ---
 ## Getting Started
