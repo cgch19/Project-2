@@ -1,6 +1,5 @@
 const express = require('express')
 const app = express()
-const port = 3000
 const methodOverride = require("method-override")
 require('./config/database');
 require('dotenv').config();
