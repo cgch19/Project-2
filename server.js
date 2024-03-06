@@ -39,7 +39,7 @@ app.get("/", (req, res) => {
 
 
 
-app.listen(port, () => {
+app.listen(process.env.PORT, () => {
     console.log("listening to port 3000")
 })
 
