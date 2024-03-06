@@ -238,3 +238,9 @@ header {
 .input-group {
     margin-bottom: 10px;
 }
+.input-group {
+    display: block;
+    margin-bottom: 5px;
+    text-align: center;
+    
+}
