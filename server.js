@@ -20,14 +20,7 @@ app.use(session({
     resave: false,
     saveUninitialized: false
 }))
-app.use((req, res, next) => {
-    req.currentUser = {
-        email: 'example@example.com'
-    };
-    next();
-});
 
-// app.set('view engine', 'ejs');
 
 app.use('/sessions', sessionsController)
 app.use('/contacts', contactRoutes)
