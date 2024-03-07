@@ -1,5 +1,6 @@
 const express = require('express')
 const app = express()
+const port = 3000
 const methodOverride = require("method-override")
 require('./config/database');
 require('dotenv').config();
@@ -39,7 +40,7 @@ app.get("/", (req, res) => {
 
 
 
-app.listen(process.env.PORT, () => {
+app.listen(port, () => {
     console.log("listening to port 3000")
 })
 
