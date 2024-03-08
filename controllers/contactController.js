@@ -33,7 +33,7 @@ const index = async (req, res) => {
         res.render('index.ejs', { 
             allContacts: contacts, 
             tabTitle: 'Index', 
-            currentUser: req.session.User 
+            currentUser: req.session.currentUser,
         })
     }catch(err) {
         console.log(err)
@@ -76,7 +76,7 @@ const editForm = async (req, res) => {
         res.render("edit.ejs", {
             contact,
             tabTitle: 'Edit Contact',
-            curentUser: req.session.currentUser
+            currentUser: req.session.currentUser
         })
     }catch(err) {
         console.log(err)

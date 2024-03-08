@@ -9,9 +9,13 @@
           <input type="submit" class="btn-sign-out"value="Sign Out" />
         </form>
     </div>
+    <ul class="btn-welcome-out">Welcome: <%= currentUser.username %></ul>
     <h1 class="heading">Contacts</h1>
     <div class="container">
-    
+        <!--Used these links to use the tables on html
+             https://www.w3schools.com/howto/howto_html_table_nested.asp 
+            https://www.w3schools.com/tags/tag_th.asp
+            https://www.w3schools.com/tags/tag_tr.asp#:~:text=Definition%20and%20Usage,%3E%20or%20elements.-->
         <a href="/contacts/new" class="btn btn-primary">Create Contact</a>
         <table class="contact-table">
             <tbody>

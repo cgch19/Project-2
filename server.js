@@ -22,6 +22,7 @@ app.use(session({
 }))
 
 
+
 app.use('/sessions', sessionsController)
 app.use('/contacts', contactRoutes)
 app.use('/users', userController)
@@ -29,8 +30,6 @@ app.use('/users', userController)
 app.get("/", (req, res) => {
     res.redirect("/contacts")
 })
-
-
 
 app.listen(process.env.PORT, () => {
     console.log("listening to port 3000")

@@ -163,7 +163,7 @@ a{
 
 .top-right {
     position: fixed;
-    top: 10px;
+    top: 50px;
     right: 10px;
 }
 .btn-sign-out {
@@ -229,9 +229,6 @@ header {
     padding: 10px; 
     box-sizing: border-box;
 }
-/* .show-password {
-    margin-top: 5px;
-} */
 .show-password {
     display: inline-block;
     margin-left: 5px;
@@ -244,7 +241,6 @@ header {
     display: block;
     margin-bottom: 5px;
     text-align: center;
-    
 }
 .continents{
     display: flex;
@@ -257,4 +253,13 @@ header {
     font-size: 16px;
     color: #333;
     text-decoration: none;
+}
+.btn-welcome-out{
+    padding: 8px 12px;
+    background-color: blueviolet; 
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
 }
