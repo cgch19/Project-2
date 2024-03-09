@@ -5,7 +5,9 @@ const contactSchema = new mongoose.Schema({
     name: { type: String, required: true },
     phone: { type: String, required: true },
     address: { type: String, required: true },
-    createdBy: {
+    // This is the website that helped with the createdBy schema
+    //https://mongoosejs.com/docs/schematypes.html
+    creation: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User',
         required: true
