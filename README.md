@@ -1,4 +1,4 @@
-#  Contact List Finder
+#  Contacts App
  ---
 ## Contact List
 The Contact List finder is designed to help users organize and manage their contacts efficiently. It provides a user-friendly interface for adding, editing, searching, and deleting contacts.
