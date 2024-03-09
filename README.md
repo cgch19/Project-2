@@ -15,7 +15,7 @@ The Contact List finder is designed to help users organize and manage their cont
 
 ---
 ## Built with
--  Node/Express/MongoDB app 
+-  Node,Express,MongoDB,Bcrypt,Heroku,CSS
 ---
 ## Getting Started
 - Method 1: Down here is the link to my Project2 App and all you have to do is click the link!
