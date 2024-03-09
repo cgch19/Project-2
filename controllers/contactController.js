@@ -85,9 +85,7 @@ const editForm = async (req, res) => {
 // UPDATE
 const update = async (req, res) => {
     try{
-        console.log(req.body)
         req.body.contactUpdated = req.body.contactUpdated === 'on' ? true : false
-        console.log(req.body)
         const index = req.params.id
         const contact = await Contact.findByIdAndUpdate( {_id:req.params.id, creation: req.session.currentUser._id },req.body,{ new: true })
         res.redirect('/contacts')
