@@ -18,8 +18,8 @@ const newForm = (req, res) => {
 const create = async (req, res) => {
     try{
         req.body.isFriend = req.body.isFriend === 'on' ? true : false
-        const newContact = await Contact.create(req.body)
-        console.log(newContact)
+        const newContact = await Contact.create({...req.body, createdBy:req.session.currentUser._id})
+        console.log(newContact),
         res.redirect('/contacts')
     }catch(err){
         console.log(err)
@@ -29,7 +29,7 @@ const create = async (req, res) => {
 //INDEX
 const index = async (req, res) => {
     try {
-        const contacts = await Contact.find()
+        const contacts = await Contact.find({createdBy:req.session.currentUser._id})
         res.render('index.ejs', { 
             allContacts: contacts, 
             tabTitle: 'Index', 
@@ -54,7 +54,6 @@ const show = async (req, res) => {
        });
     } catch (err) {
        console.log(err);
-       res.status(500).send("Internal Server Error");
     }
  };
 
@@ -62,7 +61,7 @@ const show = async (req, res) => {
 const destroy = async (req, res) => {
     try{
         console.log("inside destroy route")
-        await Contact.findByIdAndDelete(req.params.id)
+        await Contact.findByIdAndDelete({_id:req.params.id,  createdBy:req.session.currentUser._id})
         res.redirect('/contacts')
     }catch(err){
         console.log(err)
@@ -72,7 +71,7 @@ const destroy = async (req, res) => {
 //EDIT
 const editForm = async (req, res) => {
     try {
-        const contact = await Contact.findById(req.params.id)
+        const contact = await Contact.findById({_id:req.params.id, createdBy:req.session.currentUser._id})
         res.render("edit.ejs", {
             contact,
             tabTitle: 'Edit Contact',
@@ -83,14 +82,14 @@ const editForm = async (req, res) => {
     }
 }
 
-//UPDATE
+// UPDATE
 const update = async (req, res) => {
     try{
         console.log(req.body)
         req.body.contactUpdated = req.body.contactUpdated === 'on' ? true : false
         console.log(req.body)
         const index = req.params.id
-        const contact = await Contact.findByIdAndUpdate(index, req.body, { new: true })
+        const contact = await Contact.findByIdAndUpdate( {_id:req.body, createdBy: req.session.currentUser._id },req.body,{ new: true })
         res.redirect('/contacts')
     }catch(err){
         console.log(err)
