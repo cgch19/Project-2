@@ -10,6 +10,8 @@ router.get("/new", (req, res) => {
 // creating a new user
 router.post("/", async(req, res) => {
     try{
+        // used this to make the password not visible
+        //https://www.tabnine.com/code/javascript/functions/bcrypt/hashSync
         req.body.password = bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(10))
         const newUser = await User.create(req.body)
         res.redirect("/")
